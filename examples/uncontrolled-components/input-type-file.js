@@ -7,7 +7,7 @@ class FileInput extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     alert(
-      `Selected file - ${this.fileInput.files[0].name}`
+      `Selected file - ${this.fileInput.files[0].name}` //check fileInput is required, If not then implement check before accessing properties
     );
   }
 
@@ -21,7 +21,7 @@ class FileInput extends React.Component {
             type="file"
             ref={input => {
               this.fileInput = input;
-            }}
+            }} required
           />
         </label>
         <br />
